@@ -1,10 +1,10 @@
 package dsa.sort;
 
-class Node<T> {
+class QNode<T> {
 	T value;
-	Node<T> next;
+	QNode<T> next;
 	
-	Node(T value) {
+	QNode(T value) {
 		this.value = value;
 	}
 }
@@ -12,15 +12,15 @@ class Node<T> {
 public class Queue<T> {
 	
 	public int length;
-	private Node<T> head;
-	private Node<T> tail;
+	private QNode<T> head;
+	private QNode<T> tail;
 	
 	public Queue() {
 		this.length = 0;
 	}
 	
 	public void enqueue(T item) {
-		Node<T> node = new Node<>(item);
+		QNode<T> node = new QNode<>(item);
 		this.length++;
 		if (this.tail == null) {
 			this.tail = this.head = node;
@@ -38,7 +38,7 @@ public class Queue<T> {
 		
 		this.length--;
 		
-		Node<T> head = this.head;
+		QNode<T> head = this.head;
 		this.head = this.head.next;
 		
 		// free
