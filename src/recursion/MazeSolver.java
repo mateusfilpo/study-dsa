@@ -15,9 +15,9 @@ class Point {
 public class MazeSolver {
 
     private static final int[][] DIRECTIONS = {
-            {1, 0},  // top
-            {0, 1},  // right
-            {0, -1}, // bottom
+            {1, 0},  // right
+            {0, 1},  // bottom 
+            {0, -1}, // top
             {-1, 0}  // left
     };
 
